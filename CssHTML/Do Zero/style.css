@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box; /*tamanho padrão bordas*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif; /*fonte padrado para todos os elementos*/
+  color: #0f0f0f;
+  font-size: 14px;
+}
+
+.img-thumb {
+  /*tamanho imagem*/
+  width: 100%;
+  border-bottom-left-radius: 15px; /*arredonda bordas*/
+  border-bottom-right-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.img-canal {
+  /*tamanho imagem*/
+  width: 36px;
+  border-radius: 50%; /*quando é imagem quadrada da de usar o % porém se for outro formato, usar um numero muito grande*/
+}
+
+.caixa-texto {
+  /*diminuir espaçamento entre texto*/
+  display: flex; /*deixar em linha*/
+  flex-direction: column; /*colocar coluna*/
+  gap: 7px;
+}
+
+.caixa-titulo {
+  font-weight: 1000px;
+  text-decoration: none;
+  font-size: 16px;
+  color: inherit; /*herda cor*/
+}
+
+.caixa-subtexto {
+  /*diminuir espaçamento entre texto*/
+  display: flex;
+  flex-direction: column;
+  gap: 2;
+  color: #606060;
+}
+
+.caixa-subtexto a {
+  color: inherit; /*força herança*/
+  text-decoration: none;
+  display: block; /*transforma em flex o em bloco novamente*/
+}
+
+.caixa-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.caixa-videos {
+  display: flex;
+  flex-wrap: wrap; /*vai até o final, termino o espaço e quebra*/
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-bottom: 50px;
+}
+
+.caixa-video {
+  width: 32%; /*tamanho de cada bloco*/
+}
+
+.caixa-aovivo {
+  display: flex;
+  gap: 5px;
+  color: #ffffff;
+  background-color: red;
+  padding: 1px 3px;
+  fill: white;
+  border-radius: 3px;
+  width: max-content;
+  font-size: 13px;
+  text-transform: uppercase; /*transforma o texto tudo para maiusculo*/
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.categorias {
+  margin-top: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.categoria {
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 8px;
+  padding: 7px 12px;
+  border: none;
+  font-size: 14px;
+  background-color: #0000000d;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.categoria:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.categoria.selecionado {
+  /*quando tem o . significa que anmas estao juntas*/
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.principal {
+  display: flex;
+  gap: 30px;
+  background-style: #606060;
+}
+
+.menu-lateral {
+  min-width: 240px;
+  width: 240px;
+}
+
+.menu-bloco,
+.menu-login {
+  border-bottom: 1px solid rgb(71, 70, 70);
+  padding: 15px;
+}
+
+.menu-bloco:last-child {
+  border: none;
+}
+
+.bloco-item {
+  display: flex;
+  border-radius: 12px;
+  padding: 7.5px 15px;
+  align-items: center;
+  gap: 20px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 200ms ease;
+}
+
+.bloco-item.selecionado {
+  font-weight: 600;
+}
+
+.bloco-item:hover,
+.bloco-item.selecionado {
+  background-color: #3736360d;
+}
+
+.bloco-item.selecionado:hover {
+  background-color: #0000000d;
+}
+
+.bloco-titulo {
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3px 0px;
+}
+
+.menu-login {
+  padding: 16px 32px;
+}
+
+.login-texto {
+  margin-bottom: 15px;
+}
+
+.login-bloco {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 6px;
+  border-radius: 100px;
+  border: 1px solid rgb(71, 70, 70);
+  padding: 6px 12px;
+  color: #065fd4;
+  fill: #065fd4;
+  width: max-content;
+  /*transition all*/
+  transition-property: background-color, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+.login-bloco:hover {
+  background-color: #def1ff;
+  border-color: #def1ff;
+}
+
+.bloco-texto {
+  color: inherit;
+  font-weight: 500;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between; /*espaçamento entre os div, divid pelo tamanho do flex ogualmente entre os campos*/
+  padding: 5px 15px;
+}
+
+.caixa-logo,
+.caixa-pesquisa,
+.caixa-login {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icone-menu {
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 200ms ease;
+}
+
+.icone-menu:hover {
+  background-color: #0000000d;
+}
+
+.icone-logo {
+  height: 20px;
+}
+
+.caixa-logo {
+  margin-left: 7px;
+}
+
+.caixa-pesquisa {
+  margin-left: 32px;
+}
+
+.input-pesquisa {
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0.25);
+  height: 40px;
+  width: 640px;
+  font-size: 16px;
+  padding: 0px 20px;
+}
+
+.icone-menu,
+.icone-microfone {
+  cursor: pointer;
+}
+
+.icone-microfone {
+  width: 40px;
+  height: 40px;
+  padding: 7.5px;
+  background-color: #0000000d;
+  border-radius: 50%;
+  transition: background-color 200ms ease;
+}
+
+.icone-microfone:hover {
+  background-color: rgb(226, 226, 226);
+}
